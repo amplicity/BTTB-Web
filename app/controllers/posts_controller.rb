@@ -3,6 +3,9 @@ class PostsController < ApplicationController
   before_filter :authenticate, :except => [:index, :show]
   # GET /posts
   # GET /posts.json
+  def play
+  end
+  
   def index
     @posts = Post.all
   end

@@ -21,17 +21,20 @@ button:focus
 	right: 14px;
 }
 
-span.glyphicon-play-circle{
-	font-size: 12.0em;
+.glyphicon-play-circle{
+	font-size: 170px;
 	position: absolute;
-	margin-left: .1em;
-	margin-top: .08em;
 	color: #474747;
-	opacity: 0.5;
-	transition: opacity .5s;
+	opacity: 0.6;
+	transition: opacity .3s;
+	height: 201px;
+	width: 201px;
+	margin-top: -1px;
+	border-radius: 6px;
+
 }
-span.glyphicon-play-circle:hover{
-	opacity:.9;
-	transition: opacity .5s;
+.glyphicon-play-circle:hover{
+	opacity:.3;
+	transition: opacity .3s;
 }
 
