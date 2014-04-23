@@ -1,0 +1,47 @@
+    <% @posts.each do |post| %>
+    <!-- this should be moved to a partial-->
+      <div class="col-md-10" style="margin-bottom:30px;">
+        <div class="media" style="position:relative;">
+          <a href="#">
+            <span class="glyphicon glyphicon-play-circle"></span>
+          </a>  
+          <img class="media-object img-rounded pull-left" style="width: 200px; height: 200px;" src="<%= post.image_url %>">
+ 
+      
+          <div class="media-body" style="height: 150px;">
+            <div class="hidden-xs">
+              <h4 class="media-heading"><%= post.title %></h4>
+            </div>
+            <div class="visible-xs">
+              <h5 class="media-heading"><%= post.title %></h5>
+            </div>
+
+         <!-- Nested media object -->
+            <div class="media col-md-10" >
+              <div class = "hidden-xs">
+                <%= truncate(post.body, :length => 300) %>
+              </div>
+              <div class ="visible-xs">
+               <!-- truncate(post.body, :length => 50) -->
+              </div>
+            </div>
+
+          </div>
+          <div class="media col-md-4" style="">
+    
+                <button type="button" class="btn btn-primary">Read More</button>
+      
+          </div>          
+         </div>
+        </div>
+    <!-- end partial -->
+
+    <% end %>
+ 
+</table>
+
+<br>
+
+<%= link_to 'Ads', new_post_path %>
+
+
