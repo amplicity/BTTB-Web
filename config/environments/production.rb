@@ -25,7 +25,8 @@ Bttb2::Application.configure do
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
-
+  #ToDo: this should be turned off, application.js should have bootstrap.js reordered
+  #and style.css should be added to application.css manifest.
   # Do  fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true
 
