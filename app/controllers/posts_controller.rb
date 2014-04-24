@@ -1,13 +1,21 @@
 class PostsController < ApplicationController
+  require 'debugger'
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate, :except => [:index, :show]
   # GET /posts
   # GET /posts.json
   def play
+   
+    @post = Post.find(params[:post_id])
+
+    respond_to do |format|
+      format.js
+    end
+
   end
-  
+
   def index
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC")
   end
 
   # GET /posts/1
@@ -59,7 +67,7 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url }
+      format.html { redirect_to admin_url }
       format.json { head :no_content }
     end
   end

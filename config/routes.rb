@@ -1,4 +1,5 @@
 Bttb2::Application.routes.draw do
+  get 'admin' => 'admin#index'
   get 'posts/play'
   resources :posts
   resources :splash_screen

@@ -1,0 +1,26 @@
+<span class="inline shake"><h1 class="hype">It's Bang to the Beat, bitch.</h1></span>
+<table class="table table-striped">
+  <br><br>
+  <%= link_to "New Post", new_post_path %>
+  <tr>
+    <td>Date</td>
+    <td>Title</td>
+    <td>Go to Post</td>
+    <td>Edit Post</td>
+    <td>Delete</td>
+  </tr>
+
+  <% @posts.each do |post| %>
+    <tr>
+
+      <td><%= post.created_at%></td>
+      <td><%= post.title %></td>
+      <td><a href="/posts/<%= post.id %>">Show</a></td>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
+      <td><%= link_to 'Delete', post, method: :delete, :confirm => "You sure you wanna delete this, bungalo bob?" %></td>
+    </tr>
+  <% end %>
+
+
+
+</table>

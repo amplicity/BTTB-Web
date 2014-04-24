@@ -22,7 +22,7 @@
          <!-- Nested media object -->
             <div class="media col-md-10" >
               <div class = "hidden-xs">
-                <%= truncate(post.body, :length => 300) %>
+                <%= truncate(post.body.html_safe, :length => 300) %>
               </div>
               <div class ="visible-xs">
                <!-- truncate(post.body, :length => 50) -->
@@ -31,9 +31,7 @@
 
           </div>
           <div class="media col-md-4" style="">
-    
-                <button type="button" class="btn btn-primary">Read More</button>
-      
+            <a href="/posts/<%= post.id %>" class="btn btn-primary">Peep That</a>
           </div>          
          </div>
         </div>
