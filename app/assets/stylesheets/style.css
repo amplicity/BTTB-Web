@@ -31,6 +31,8 @@ button:focus
 	width: 201px;
 	margin-top: -1px;
 	border-radius: 6px;
+	z-index:99;
+	margin-right:300px;
 
 }
 .glyphicon-play-circle:hover{
