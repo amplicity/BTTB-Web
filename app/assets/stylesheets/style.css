@@ -32,7 +32,8 @@ button:focus
 	margin-top: -1px;
 	border-radius: 6px;
 	z-index:99;
-	left:10px;
+	left:0px;
+	top:100px;
 
 
 }
