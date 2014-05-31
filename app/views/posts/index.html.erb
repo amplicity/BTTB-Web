@@ -16,7 +16,7 @@
               <h4 class="media-heading"><%= post.title %></h4>
             </div>
             <div class="visible-xs">
-              <h5 class="media-heading"><%= post.title %></h5>
+              <!--<h5 class="media-heading"><%= post.title %></h5>-->
             </div>
 
          <!-- Nested media object -->
@@ -31,7 +31,9 @@
 
           </div>
           <div class="media col-md-4" style="">
-            <a href="/posts/<%= post.id %>" class="btn btn-primary">Peep That</a>
+            <div class="hidden-xs">
+              <a href="/posts/<%= post.id %>" class="btn btn-primary">Peep That</a>
+            </div>
           </div>          
          </div>
         </div>
