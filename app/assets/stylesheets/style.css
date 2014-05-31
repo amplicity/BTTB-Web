@@ -33,7 +33,7 @@ button:focus
 	border-radius: 6px;
 	z-index:99;
 	display:inline-block;
-
+	vertical-align:text-top;
 
 }
 .glyphicon-play-circle:hover{
