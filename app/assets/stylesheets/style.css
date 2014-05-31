@@ -32,8 +32,8 @@ button:focus
 	margin-top: -1px;
 	border-radius: 6px;
 	z-index:99;
-	display:inline-block;
-	vertical-align:text-top;
+	left:0px;
+
 
 }
 .glyphicon-play-circle:hover{

@@ -2,13 +2,14 @@
     <!-- this should be moved to a partial-->
       <div class="col-md-10" style="margin-bottom:30px;">
         <div class="media" style="position:relative;">
+          <img class="media-object img-rounded pull-left" style="position:relative; z-index:1; width: 200px; height: 200px;" src="<%= post.image_url %>">
           <!--play form-->
           <%= form_tag posts_play_path, :method => 'get', :remote => true do %>
             <%= hidden_field_tag(:post_id, post.id) %>
             <button type="submit" class="img-rounded glyphicon glyphicon-play-circle"></button>
           <% end %>
           <!-- end play form-->
-          <img class="media-object img-rounded pull-left" style="width: 200px; height: 200px;" src="<%= post.image_url %>">
+
  
       
           <div class="media-body" style="height: 150px;">
