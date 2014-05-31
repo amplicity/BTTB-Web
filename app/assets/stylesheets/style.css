@@ -32,6 +32,7 @@ button:focus
 	margin-top: -1px;
 	border-radius: 6px;
 	z-index:99;
+	display:inline-block;
 
 
 }
