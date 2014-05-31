@@ -22,7 +22,7 @@ button:focus
 }
 
 .glyphicon-play-circle{
-	
+	font-size: 10em;
 	position: absolute;
 	color: #474747;
 	opacity: 0.6;
