@@ -28,7 +28,7 @@ Bttb2::Application.configure do
   #ToDo: this should be turned off, application.js should have bootstrap.js reordered
   #and style.css should be added to application.css manifest.
   # Do  fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs.
   config.assets.digest = true
