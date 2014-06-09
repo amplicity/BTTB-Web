@@ -141,6 +141,7 @@ DEPENDENCIES
   debugger
   jbuilder (~> 1.2)
   jquery-rails
+  json
   mysql2
   pg
   rails (= 4.0.1)

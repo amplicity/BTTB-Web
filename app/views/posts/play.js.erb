@@ -1,2 +1,25 @@
+//play link
+<% if @valid_link == true %> 
+	//$('#cover_art_<%= @post.id %>').html('<div id="loaderImage"></div>');
+	//new imageLoader(cImageSrc, 'startAnimation()');
+	//checks if sound already playing
+	if (typeof soundManager != "undefined")
+	{	
+		//stops all instances of soundManager
+		soundManager.stopAll();
+	}
+	SC.stream("<%= @track_url %>", function(sound){
+	  sound.play();
+	});
+//link invalid
+<% else %>
+	$('.notifications').append("<div id='myAlert' class='alert alert-danger fade' style='display: inline-block;''>This link isn't valid, try another track :(.</div>");
+	  $("#myAlert").addClass("in");
 
-$('#result').html('<%= @post.soundcloud_url %>');
+	//fades out
+	  window.setTimeout(function() {
+	    $("#myAlert").fadeTo(300, 0).slideUp(500, function(){
+	        $(this).remove(); 
+	    });
+	}, 3000);
+<% end %>

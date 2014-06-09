@@ -15,5 +15,7 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap
+//= require canvas
+//= require loader
 
 

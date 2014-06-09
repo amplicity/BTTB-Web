@@ -1,12 +1,29 @@
 class PostsController < ApplicationController
-
+  #for parsing uri
+  require 'open-uri'
+  #for parsing json from uri
+  require 'json'
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate, :except => [:index, :show]
+  before_filter :authenticate, :except => [:index, :show, :play]
   # GET /posts
   # GET /posts.json
   def play
-   
+   @client_id = "e2d9022d3a7c8321d8582a73674106a8"
     @post = Post.find(params[:post_id])
+    url_string = "http://api.soundcloud.com/resolve.json?url=" + @post.soundcloud_url + "&client_id=" + @client_id
+    #catch error if soundcloud track is invalid
+    begin
+      data = open(url_string)
+      result = JSON.parse(data.read)
+      track_id = result["id"]
+      @track_url = "/tracks/" + track_id.to_s
+      @valid_link = true
+    rescue
+      #flag invalid link
+      @valid_link = false
+    end
+
+
 
     respond_to do |format|
       format.js

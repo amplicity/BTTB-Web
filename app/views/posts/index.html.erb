@@ -1,4 +1,6 @@
+    <div class="notifications"></div>
     <% @posts.each do |post| %>
+
     <!-- this should be moved to a partial-->
       <div class="col-md-10" style="margin-bottom:30px;">
         <div class="media" style="position:relative;">
@@ -6,7 +8,9 @@
           <!--play form-->
           <%= form_tag posts_play_path, :method => 'get', :remote => true do %>
             <%= hidden_field_tag(:post_id, post.id) %>
-            <button type="submit" class="img-rounded glyphicon glyphicon-play-circle"></button>
+            <div id="cover_art_<%= post.id %>">
+              <button type="submit" class="img-rounded glyphicon glyphicon-play-circle"></button>
+            </div>
           <% end %>
           <!-- end play form-->
 
