@@ -33,6 +33,17 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.order("created_at DESC")
+
+    #begin
+    # data = open(url_string)
+   #  result = JSON.parse(data.read)
+    #  track_id = result["id"]
+    #  @track_url = "/tracks/" + track_id.to_s
+     # @valid_link = true
+   # rescue
+      #flag invalid link
+     # @valid_link = false
+    #end
   end
 
   # GET /posts/1
