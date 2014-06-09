@@ -36,6 +36,25 @@ button:focus
 
 
 }
+.play-circle
+{
+	position: absolute;
+	color: #474747;
+	opacity: 0.6;
+	transition: opacity .3s;
+	height: 201px;
+	width: 201px;
+	margin-top: -1px;
+	border-radius: 6px;
+	z-index:99;
+	left:0px;
+}
+
+.play-circle:hover
+{
+	opacity:.3;
+	transition: opacity .3s;
+}
 .glyphicon-play-circle:hover{
 	opacity:.3;
 	transition: opacity .3s;

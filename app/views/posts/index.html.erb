@@ -9,7 +9,8 @@
           <%= form_tag posts_play_path, :method => 'get', :remote => true do %>
             <%= hidden_field_tag(:post_id, post.id) %>
             <div id="cover_art_<%= post.id %>">
-              <button type="submit" class="img-rounded glyphicon glyphicon-play-circle"></button>
+              <!--<button type="submit" class="img-rounded glyphicon glyphicon-play-circle"></button>-->
+               <%= image_submit_tag "play_circle.png", class: 'play-circle' %>
             </div>
           <% end %>
           <!-- end play form-->
