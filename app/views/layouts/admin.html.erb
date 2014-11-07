@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bang to the Beat - Your Sex Playlist</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <!-- soundcloud -->
+	<script src="http://connect.soundcloud.com/sdk.js"></script>
+	<script>
+	  SC.initialize({
+	    client_id: "e2d9022d3a7c8321d8582a73674106a8",
+	    redirect_uri: "",
+	  });
+	</script>
+	<!--/soundcloud-->	
+	<!--bootstrap iphone thing-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!--/boostrap iphone thing-->  
+</head>
+<body>
+	<div class="container">
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      	<a class="navbar-brand" href="<%= posts_path %>">
+		      		<div class="bttb_logo">
+		      		
+		      		</div>
+		      	</a>
+
+		    </div>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li><a href="#">About</a></li>
+		        <li><a href="#">Contact</a></li>
+		      </ul>
+		      <!--<form class="navbar-form navbar-left" role="search">
+		        <div class="form-group">
+		          <input type="text" class="form-control" placeholder="Search">
+		        </div>
+		        <button type="submit" class="btn btn-default">Submit</button>
+		      </form>-->
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="http://www.facebook.com/bangtothebeat" target="_blank"><img src="<%= image_path "facebook.png" %>" class="sm-icons"></a></li>
+				<li><a href="http://www.twitter.com/bang2thebeat" target="_blank"><img src="<%= image_path "twitter.png" %>" class="sm-icons"></a></li>
+				<li><a href="http://www.soundcloud.com/bang-to-the-beat" target="_blank"><img src="<%= image_path "soundcloud.png" %>" class="sm-icons"></a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+		<!--<div class="hero-unit inverse">
+		    <h1>Marketing stuff!</h1>
+		 
+		    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+		 
+		    <a href="#" class="btn btn-large btn-success">Get Started</a>
+		</div>-->
+		<div class="spacer">
+		</div>
+
+		
+	<%= yield %>
+	
+	</div>
+</body>
+</html>
